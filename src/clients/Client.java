@@ -2,11 +2,11 @@ package clients;
 
 public class Client {
 
-    private String nom;
-    private String prenom;
+    protected String nom;
+    protected String prenom;
     private String numeroPermis;
-    private String telephone;
-    private int anneeNaissance;
+    protected String telephone;
+    protected int anneeNaissance;
     private static int compteurClients;
 
     public String getNom() {return nom;}
@@ -62,6 +62,10 @@ public class Client {
     public int calculerAge(int anneeCourante){
         int age = anneeCourante - anneeNaissance;
         return age;
+    }
+
+    public double calculerRemise(){
+        return 0.0;
     }
 
     @Override
